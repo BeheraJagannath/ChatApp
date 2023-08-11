@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottondheet_background">
+
+    <LinearLayout
+        android:id="@+id/sa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/camera_gallery_circle"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_camera"
+                app:tint="@color/current_color" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/camera"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/n_black"
+                android:text="Camera"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/gallery"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/camera_gallery_circle"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_image_vector"
+                app:tint="@color/current_color" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gallery"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/n_black"
+                android:text="Gallery"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

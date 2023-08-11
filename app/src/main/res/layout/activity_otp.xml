@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OtpActivity">
+    <LinearLayout
+        android:id="@+id/open_otpView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:visibility="visible"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:text="Enter The OTP Which You Received"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:textSize="@dimen/_14sdp"
+            android:text="+918905673456"
+            android:gravity="center"/>
+        <com.mukeshsolanki.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            app:OtpItemCount="6"
+            app:OtpLineColor="@android:color/transparent"
+            android:itemBackground="@drawable/otpview_background"
+            app:OtpViewType="line"
+            />
+
+        <!--<TextView
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_13sdp" />-->
+
+        <Button
+            android:id="@+id/verify_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/current_color"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:textSize="@dimen/_15sdp"
+            android:text="Verify otp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/open_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <RelativeLayout
+            android:id="@+id/frame"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person_crop_circle"
+                />
+            <ImageView
+                android:id="@+id/add_profile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_circle"
+                android:backgroundTint="@color/current_color"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_camera"
+                app:tint="@color/white"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Profile information"/>
+
+        <EditText
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:background="@drawable/edit_background"
+            android:hint="Enter Your Name Here"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/n_black"
+            android:textSize="@dimen/_18sdp" />
+
+        <Button
+            android:id="@+id/save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/current_color"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:textSize="@dimen/_15sdp"
+            android:text="Save profile"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
